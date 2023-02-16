@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{ box-sizing:border-box; }
+       .container{
+          width:1200px;
+          margin:10px auto;
+       }
+       .gallbox{
+          width:500px;
+          border:1px solid #ddd;
+       }
+       .bigimg>img{
+          max-width:100%;
+       }
+       .smimg{
+          display:flex;
+          justify-content: space-between;
+       }
+       .smimg>img{
+          width:120px;
+          cursor:pointer;
+       }
+    </style>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+      $(function(){
+         $('.smimg>img').click(function(){
+            const img = $(this).attr("src");
+            $('.bigimg>img').attr("src", img);
+         });
+      }); //jquery
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="gallbox">
+            <div class="bigimg">
+               <img src="../0216/images/1.jpeg" alt="#">
+            </div>
+            <div class="smimg">
+                <img src="../0216/images/1.jpeg" alt="#">
+                <img src="../0216/images/2.jpeg" alt="#">
+                <img src="../0216/images/3.jpeg" alt="#">
+                <img src="../0216/images/4.jpeg" alt="#">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
